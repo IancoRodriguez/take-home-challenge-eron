@@ -1,6 +1,6 @@
 package com.eron.challenge.exception;
 
-import com.eron.challenge.model.dto.ErrorResponse;
+import model.dto.ErrorResponse;
 import jakarta.validation.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
