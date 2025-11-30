@@ -39,6 +39,13 @@ jobs:
       - name: Run tests with coverage
         run: ./gradlew test jacocoTestReport --no-daemon --stacktrace --info
 
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: build/reports/jacoco/test/jacocoTestReport.xml
+          format: jacoco
+
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
