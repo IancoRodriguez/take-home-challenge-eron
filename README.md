@@ -26,10 +26,17 @@ REST API that analyzes movies from an external source and identifies directors w
 ./gradlew bootRun
 ```
 
-**Access:**
-- API: http://localhost:8080
-- Swagger UI: http://localhost:8080/swagger-ui/index.html
-- Health: http://localhost:8080/actuator/health
+
+## 🚀 Live Demo
+
+**API en AWS:** http://54.92.249.194:8080
+
+**Endpoints:**
+- API: http://54.92.249.194:8080/api/directors?threshold=4
+- Swagger UI: http://54.92.249.194:8080/swagger-ui/index.html
+- Health Check: http://54.92.249.194:8080/actuator/health
+
+
 
 ### Run with Docker
 ```bash
@@ -181,6 +188,45 @@ docker run -p 8080:8080 movie-directors-api
 ```bash
 docker-compose up
 ```
+## ☁️ AWS Deployment
+
+**Live Production URL:** http://54.92.249.194:8080
+
+### Endpoints
+- **API:** http://54.92.249.194:8080/api/directors?threshold=4
+- **Swagger UI:** http://54.92.249.194:8080/swagger-ui/index.html
+- **Health Check:** http://54.92.249.194:8080/actuator/health
+
+### Infrastructure
+- **Platform:** AWS ECS Fargate (Serverless containers)
+- **Region:** us-east-1 (N. Virginia)
+- **Container Registry:** AWS ECR
+- **Compute:** 256 CPU / 512 MB Memory
+- **Networking:** VPC with public subnets, Security Group on port 8080
+- **Logging:** CloudWatch Logs
+
+### Deployment Architecture
+```
+GitHub → Docker Image → AWS ECR → ECS Fargate → Public IP
+```
+
+### CI/CD Pipeline
+- Code push to `master` triggers GitHub Actions
+- Automated testing and Docker build
+- Manual deployment to AWS ECS (can be automated)
+
+---
+
+## 📝 Deployment Notes
+
+**Cost:** Running on AWS Free Tier (first 12 months free)
+
+**Scalability:** Can easily scale to multiple tasks with load balancer
+
+**Monitoring:** Logs available in CloudWatch at `/ecs/movie-directors`
+
+
+
 
 ## 🔍 Monitoring
 
