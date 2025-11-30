@@ -15,7 +15,7 @@ REST API that analyzes movies from an external source and identifies directors w
 - ⚡ In-memory caching with Caffeine (5min TTL)
 - ✅ Comprehensive validation and error handling
 - 📖 Interactive API documentation (Swagger UI)
-- 🧪 84% test coverage (Unit + Integration tests)
+- 🧪 84% test coverage (Unit + Integration tests - JaCoCo ) + Coveralls integration
 - 🐳 Docker ready with health checks
 - 🚀 CI/CD with GitHub Actions
 
@@ -110,16 +110,18 @@ The application follows a clean layered architecture:
 - Global exception handler (consistent errors)
 
 ## 🧪 Testing
-```bash
-# Run all tests
-./gradlew test
 
-# Run with coverage report
-./gradlew test jacocoTestReport
+**Coverage: 84% (JaCoCo)**
 
-# View coverage report
-open build/reports/jacoco/test/html/index.html
-```
+**View Coverage Reports:**
+- 📊 [JaCoCo Report](build/reports/jacoco/test/html/index.html) (local: `./gradlew test jacocoTestReport`)
+- 📈 [Coveralls Dashboard](https://coveralls.io/github/IancoRodriguez/take-home-challenge-eron) (live tracking)
+
+**Coverage by Layer:**
+- 100% Service layer
+- 100% Controller layer
+- 95% Domain layer
+- 82% Client layer
 
 **Coverage: 81%**
 - 100% Service layer
