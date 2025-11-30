@@ -116,13 +116,9 @@ The application follows a clean layered architecture:
 - Records for DTOs (immutability)
 - Global exception handler (consistent errors)
 
-## 🧪 Testing
-
-**Coverage: 84% (JaCoCo)**
-
 **View Coverage Reports:**
-- 📊 [JaCoCo Report](build/reports/jacoco/test/html/index.html) (local: `./gradlew test jacocoTestReport`)
-- 📈 [Coveralls Dashboard](https://coveralls.io/github/IancoRodriguez/take-home-challenge-eron) (live tracking)
+- 📊 **JaCoCo Report:** Run `./gradlew test jacocoTestReport` and open `build/reports/jacoco/test/html/index.html`
+- 📈 **[Coveralls Dashboard](https://coveralls.io/github/IancoRodriguez/take-home-challenge-eron)** (live tracking)
 
 **Coverage by Layer:**
 - 100% Service layer
