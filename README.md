@@ -3,7 +3,7 @@
 REST API that analyzes movies from an external source and identifies directors with significant filmographies.
 
 ![CI/CD](https://github.com/IancoRodriguez/take-home-challenge-eron/actions/workflows/ci.yml/badge.svg)
-![Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen)
+[![Coverage Status](https://coveralls.io/repos/github/IancoRodriguez/take-home-challenge-eron/badge.svg?branch=develop)](https://coveralls.io/github/IancoRodriguez/take-home-challenge-eron?branch=develop)
 ![Java](https://img.shields.io/badge/Java-17-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.1-green)
 
@@ -121,7 +121,7 @@ The application follows a clean layered architecture:
 open build/reports/jacoco/test/html/index.html
 ```
 
-**Coverage: 84%**
+**Coverage: 81%**
 - 100% Service layer
 - 100% Controller layer
 - 95% Domain layer
@@ -209,7 +209,7 @@ GitHub Actions workflow runs on every push to `master` or `develop`:
 
 ## 👤 Author
 
-**Ian Costas**
+**Ianco Rodríguez**
 
 Built as part of a technical challenge for Eron.
 
