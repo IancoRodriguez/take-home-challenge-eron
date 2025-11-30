@@ -35,3 +35,15 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Mac ###
+.DS_Store
+
+### Windows ###
+Thumbs.db
+
+### Local Config ###
+gradle.properties
+
+### Logs ###
+*.log
