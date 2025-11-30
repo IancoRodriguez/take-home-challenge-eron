@@ -1,4 +1,4 @@
-package config;
+package com.eron.challenge.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;

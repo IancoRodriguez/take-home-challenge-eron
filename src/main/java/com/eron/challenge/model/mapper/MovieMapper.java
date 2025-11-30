@@ -1,7 +1,7 @@
-package service;
+package com.eron.challenge.model.mapper;
 
-import model.domain.Movie;
-import model.dto.MovieDto;
+import com.eron.challenge.model.domain.Movie;
+import com.eron.challenge.model.dto.MovieDto;
 import org.springframework.stereotype.Component;
 
 @Component

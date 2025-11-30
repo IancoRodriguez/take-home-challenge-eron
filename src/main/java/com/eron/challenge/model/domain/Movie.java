@@ -1,4 +1,4 @@
-package model.domain;
+package com.eron.challenge.model.domain;
 
 import java.util.Objects;
 

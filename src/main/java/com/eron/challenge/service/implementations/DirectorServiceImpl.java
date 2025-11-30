@@ -1,14 +1,14 @@
-package challenge.service;
+package com.eron.challenge.service.implementations;
 
-import client.MovieApiClient;
-import model.domain.Movie;
-import model.dto.DirectorsResponse;
-import model.dto.MovieApiResponse;
+import com.eron.challenge.client.MovieApiClient;
+import com.eron.challenge.model.domain.Movie;
+import com.eron.challenge.model.dto.MovieApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-import service.MovieMapper;
+import com.eron.challenge.model.mapper.MovieMapper;
+import com.eron.challenge.service.interfaces.DirectorService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,20 +16,21 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
-public class DirectorService {
+public class DirectorServiceImpl implements DirectorService {
 
-    private static final Logger logger = LoggerFactory.getLogger(DirectorService.class);
+    private static final Logger logger = LoggerFactory.getLogger(DirectorServiceImpl.class);
 
     private final MovieApiClient movieApiClient;
     private final MovieMapper movieMapper;
 
-    public DirectorService(MovieApiClient movieApiClient, MovieMapper movieMapper) {
+    public DirectorServiceImpl(MovieApiClient movieApiClient, MovieMapper movieMapper) {
         this.movieApiClient = movieApiClient;
         this.movieMapper = movieMapper;
     }
 
+    @Override
     @Cacheable(value = "directors", key = "#threshold")
-    public DirectorsResponse getDirectorsByThreshold(int threshold) {
+    public List<String> getDirectorsByThreshold(int threshold) {
         logger.info("Finding directors with more than {} movies", threshold);
 
         List<Movie> allMovies = fetchAllMovies();
@@ -45,7 +46,7 @@ public class DirectorService {
         logger.info("Found {} directors with more than {} movies",
                 filteredDirectors.size(), threshold);
 
-        return new DirectorsResponse(filteredDirectors);
+        return filteredDirectors;
     }
 
     private List<Movie> fetchAllMovies() {

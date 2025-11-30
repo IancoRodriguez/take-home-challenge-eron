@@ -1,4 +1,4 @@
-package model.dto;
+package com.eron.challenge.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
