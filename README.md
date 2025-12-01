@@ -19,14 +19,6 @@ REST API that analyzes movies from an external source and identifies directors w
 - 🐳 Docker ready with health checks
 - 🚀 CI/CD with GitHub Actions
 
-## 🚀 Quick Start
-
-### Run Locally
-```bash
-./gradlew bootRun
-```
-
-
 ## 🚀 Live Demo
 
 **API en AWS:** http://44.201.195.73:8080
@@ -36,6 +28,13 @@ REST API that analyzes movies from an external source and identifies directors w
 - Swagger UI: http://44.201.195.73:8080/swagger-ui/index.html
 - Health Check: http://44.201.195.73:8080/actuator/health
 
+
+## 🚀 Quick Start
+
+### Run Locally
+```bash
+./gradlew bootRun
+```
 
 ### Run with Docker
 ```bash
@@ -211,17 +210,6 @@ GitHub → Docker Image → AWS ECR → ECS Fargate → Public IP
 - Manual deployment to AWS ECS (can be automated)
 
 ---
-
-## 📝 Deployment Notes
-
-**Cost:** Running on AWS Free Tier (first 12 months free)
-
-**Scalability:** Can easily scale to multiple tasks with load balancer
-
-**Monitoring:** Logs available in CloudWatch at `/ecs/movie-directors`
-
-
-
 
 ## 🔍 Monitoring
 
