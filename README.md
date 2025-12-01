@@ -29,13 +29,12 @@ REST API that analyzes movies from an external source and identifies directors w
 
 ## 🚀 Live Demo
 
-**API en AWS:** http://54.92.249.194:8080
+**API en AWS:** http://44.201.195.73:8080
 
 **Endpoints:**
-- API: http://54.92.249.194:8080/api/directors?threshold=4
-- Swagger UI: http://54.92.249.194:8080/swagger-ui/index.html
-- Health Check: http://54.92.249.194:8080/actuator/health
-
+- API: http://44.201.195.73:8080/api/directors?threshold=4
+- Swagger UI: http://44.201.195.73:8080/swagger-ui/index.html
+- Health Check: http://44.201.195.73:8080/actuator/health
 
 
 ### Run with Docker
@@ -186,12 +185,12 @@ docker-compose up
 ```
 ## ☁️ AWS Deployment
 
-**Live Production URL:** http://54.92.249.194:8080
+**Live Production URL:** http://44.201.195.73:8080
 
 ### Endpoints
-- **API:** http://54.92.249.194:8080/api/directors?threshold=4
-- **Swagger UI:** http://54.92.249.194:8080/swagger-ui/index.html
-- **Health Check:** http://54.92.249.194:8080/actuator/health
+- **API:** http://44.201.195.73:8080/api/directors?threshold=4
+- **Swagger UI:** http://44.201.195.73:8080/swagger-ui/index.html
+- **Health Check:** http://44.201.195.73:8080/actuator/health
 
 ### Infrastructure
 - **Platform:** AWS ECS Fargate (Serverless containers)
